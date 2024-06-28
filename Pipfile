@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+digi-xbee = "~=1.4"
+flask = "~=2.2"
+flask-sqlalchemy = "~=3.0"
+flask-cors = "*"
+ipykernel = "~=6.15"
+jinja2 = "~=3.1"
+jupyter-client = "~=7.3"
+jupyter-core = "~=4.11"
+matplotlib = "~=3.5"
+numpy = "~=1.23"
+pyserial = "~=3.5"
+pyyaml = "~=6.0"
+requests = "~=2.28"
+sqlalchemy = "~=1.4"
+werkzeug = "~=2.2"
+socketcan = "~=1.2"
+flask-socketio = "*"
+simple-websocket = "*"
+
+[dev-packages]
+

@@ -1,0 +1,45 @@
+#define components of the vehicle in a YAML format
+#stores values for quick simulation as well as paths to more detailed maps
+
+Vehicle:
+  name: G1
+  pseudonym: Gaia
+  weight:
+   value: 775.28  #https://docs.google.com/spreadsheets/d/1YMj_11dPCadb4J9D5mhcS14C1itNuHNjy0grb5MpGOE/edit?usp=sharing
+   unit: kg
+  CdA:
+    value: 0.22 #not positive is accurate
+    unit: m^2
+  Crr: 0.002
+  motor_efficiency:
+    basic: .95
+    map: 
+      eff_path: data/motor_efficiency/g1_motor_eff.csv #relative path from strategy_software
+      x_scale_path: data/motor_efficiency/g1_motor_speed.csv
+      x_unit: rpm 
+      y_scale_path: data/motor_efficiency/g1_motor_phase_current_rms.csv
+      y_unit: A(rms)
+    unit: percent
+  battery:
+    num_packs: 2
+    cell_esr: 
+      value: 0.1
+      unit: Ohm
+    cells_in_series: 36
+    cells_in_parallel: 91
+    energy_per_cell: 
+      value: 44712.0
+      unit: Joule
+    cell_IV_map:
+      path: data/battery_data/g1_cell_IV.csv
+      x_unit: Amps
+      y_unit: Volts 
+  powertrain_efficieny: 
+    value: .92 
+    unit: percent 
+  charger_efficiency:
+    value: 0.92
+    unit: percent
+  array_efficiency:
+    value: 0.25
+    unit: percent
